@@ -1,0 +1,331 @@
+/* Hero Carousel */
+.hero {
+    margin-top: 110px;
+    position: relative;
+}
+
+.carousel-item {
+    height: 75vh;
+    min-height: 500px;
+    max-height: 750px;
+    position: relative;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+    z-index: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(168, 213, 206, 0.7);
+    backdrop-filter: blur(15px);
+    padding: 35px 50px;
+    border-radius: 25px;
+    bottom: 80px;
+    z-index: 2;
+    max-width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-caption h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(213, 207, 168, 0.9);
+    border-radius: 50%;
+    padding: 25px;
+}
+
+/* Why Choose Us Section */
+.why-us-section {
+    padding: 30px 0;
+    background: linear-gradient(to bottom, rgb(165, 215, 204) 0%, var(--light-bg) 100%);
+}
+
+.why-us-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--dark-brown);
+    margin-bottom: 60px;
+    font-style: italic;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 20px 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.feature-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--dark-brown);
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/*Productos Destacados */
+.stars-section {
+    padding: 60px 0;
+    background: var(--light-bg);
+}
+
+.stars-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.stars-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 25px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.1);
+}
+
+.product-content {
+    padding: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.product-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #8B4513;
+    margin-bottom: 12px;
+}
+
+.product-price-info {
+    flex: 1;
+}
+
+/* Boton descubre mas*/
+.btn-descubre {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, var(--secondary-color), #C4A876);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(212, 184, 150, 0.3);
+}
+
+.btn-descubre:hover {
+    background: linear-gradient(135deg, #C4A876, var(--secondary-color));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(212, 184, 150, 0.5);
+    color: white;
+}
+
+/* Process Section */
+.process-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.process-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--dark-brown);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.process-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.process-card {
+    text-align: center;
+    padding: 30px;
+    background: var(--light-bg);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.process-card:hover {
+    background: linear-gradient(135deg, rgba(168, 213, 206, 0.2), rgba(212, 184, 150, 0.2));
+    transform: translateY(-5px);
+}
+
+.process-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: 'Playfair Display';
+    margin-bottom: 15px;
+}
+
+.process-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--dark-brown);
+}
+
+/* Seccion de Endulzar */
+.seccion-endulzar {
+    background: linear-gradient(to bottom, rgb(165, 215, 204,0.6) 0%, rgba(255, 249, 254, 0.1) 100%);
+}
+
+.titulo-endulzar {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    font-style: italic;
+}
+
+.caja-texto {
+    background: rgba(168, 213, 206, 0.1);
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-frase {
+    font-family: 'Playfair Display';
+    font-size: 1.3rem;
+    color: var(--dark-brown);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.video-endulzar {
+    max-height: 200px;
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(52, 50, 40, 0.6);
+}
+
+/* Promotion Section */
+.promotion {
+    background:linear-gradient(135deg, #67514b 0%, #755f24 100%);
+    padding: 40px 0;
+}
+
+.promotion-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+    background: linear-gradient(135deg, #eee0dc 0%, #ede4cc 100%);
+    border-radius: 20px;
+}
+
+.promo-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 30px;
+
+}
+
+.promo-tag {
+    font-family: 'Playfair Display', serif;
+    color: rgb(74, 49, 49);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.promo-text {
+    font-family: 'Playfair Display';
+    font-size: 1.2rem;
+    color: #333;
+    margin: 3;
+    font-weight: 500;
+}
